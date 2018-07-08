@@ -12,8 +12,8 @@
 
   Their respective folder are:
 
-  - guard_demo
-  - coh_demo
-  - phx_demo
+  - blog_guard
+  - blog_coh
+  - blog_phx
 
   The tutorial series can be found on my website [alexafshar.com](http://www.alexafshar.com/2017/10/09/phoenix-auth-guardian-coherence-phauxth-part-one.html).
