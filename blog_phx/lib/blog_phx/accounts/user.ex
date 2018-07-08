@@ -8,6 +8,7 @@ defmodule BlogPhx.Accounts.User do
     field :password, :string, virtual: true
     field :password_hash, :string
     field :sessions, {:map, :integer}, default: %{}
+    field :role, :string, default: "user"
 
     timestamps()
   end
@@ -21,7 +22,7 @@ defmodule BlogPhx.Accounts.User do
 
   def create_changeset(%User{} = user, attrs) do
     user
-    |> cast(attrs, [:email, :password])
+    |> cast(attrs, [:email, :password, :role])
     |> validate_required([:email, :password])
     |> unique_email
     |> validate_password(:password)

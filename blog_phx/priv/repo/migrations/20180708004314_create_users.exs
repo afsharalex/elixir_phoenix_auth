@@ -6,6 +6,7 @@ defmodule BlogPhx.Repo.Migrations.CreateUsers do
       add :email, :string
       add :password_hash, :string
       add :sessions, {:map, :integer}, default: "{}"
+      add :role, :string
 
       timestamps()
     end
